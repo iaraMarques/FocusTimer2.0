@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #FFF;
+  --text-color: #323238;
+  --bg-card: #E1E1E6;
+  --bg-card-selected: #02799D; 
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}  
+
+html.dark {
+  --bg-color: #121214;
+  --text-color: #F8F8FC;
+  --bg-card: #242424;
+  --bg-card-selected: #42D3FF;
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+html.dark 
+#controls .play svg path,
+#controls .pause svg path,
+#controls .stop svg path,
+#controls .plus svg path,
+#controls .minus svg path {
+  fill: var(--text-color);
+}
+
+html.dark 
+#sounds #forest svg path,
+#sounds #rain svg path,
+#sounds #coffee svg path,
+#sounds #fireplace svg path {
+  fill: var(--text-color);
+}
+
+
+#toggle-mode {
+  position: absolute;
+
+  right: 3.2rem;
+  top: 3.2rem;
+
+  font-size: 3.2rem;
+  line-height: 0;
+
+  color: var(--text-color);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 100%;
+  padding: 0 10rem;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.hide {
+  display: none;
+}
+
+#timer {
+  font-size: 12.6rem;
+  font-family: 'Roboto' sans-serif;
+  font-weight: 500;
+  display: flex;
+  margin-bottom: 1.7rem;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#controls button {
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+#controls button:hover {
+  transform: scale(1.1);
+}
+
+#sounds { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.card {
+  padding: 4.8rem 4.7rem;
+  background-color: var(--bg-card);
+
+  border-radius: 2.4rem;
+
+  transition: all .4s ease;
+}
+
+.card:hover {
+  background-color: var(--bg-card-selected);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card.select {
+  background-color: var(--bg-card-selected);
+}
