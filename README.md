@@ -14,7 +14,7 @@
  <br/>
 
 <p align="center">
-  <img alt="apresentação do projeto focus timer 2.0" src="./assets/focusTimer2.png" width="100%" > 
+  <img alt="apresentação do projeto focus timer 2.0" src="./assets/FocusTimer2.png" width="100%" > 
 </p>
 
 ## 🚀 Tecnologias
